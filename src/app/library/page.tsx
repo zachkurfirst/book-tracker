@@ -1,7 +1,7 @@
 // LIBRARY: /library
 export default function Library() {
   return (
-    <main className="my-16 max-w-prose">
+    <main className="mx-8 my-16 max-w-md md:max-w-prose">
       <h1 className="mb-4 text-3xl font-bold md:text-5xl">Library</h1>
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem

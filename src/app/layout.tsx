@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} flex min-h-screen flex-col items-center bg-gradient-to-b from-slate-200 to-slate-50 p-12 text-slate-900 antialiased dark:from-slate-950 dark:to-slate-900 dark:text-slate-100`}
+        className={`${inter.className} flex min-h-screen flex-col items-center bg-gradient-to-b from-slate-200 to-slate-50 text-slate-900 antialiased dark:from-slate-950 dark:to-slate-900 dark:text-slate-100`}
       >
         <Header />
         {children}
