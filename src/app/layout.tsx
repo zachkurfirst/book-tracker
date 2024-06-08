@@ -22,7 +22,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} antialiased text-slate-900 dark:text-slate-100 bg-gradient-to-b from-slate-200 to-slate-50 dark:from-slate-950 dark:to-slate-900 flex min-h-screen flex-col p-12 items-center`}>
+        className={`${inter.className} flex min-h-screen flex-col items-center bg-gradient-to-b from-slate-200 to-slate-50 p-12 text-slate-900 antialiased dark:from-slate-950 dark:to-slate-900 dark:text-slate-100`}
+      >
         <Header />
         {children}
         <Footer />

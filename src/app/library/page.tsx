@@ -1,4 +1,4 @@
 // LIBRARY: /library
 export default function Library() {
-    return <main className="flex min-h-screen flex-col items-center p-12">My Library</main>;
+    return <main className="flex flex-col items-center my-16">My Library</main>;
 }

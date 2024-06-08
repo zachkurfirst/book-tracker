@@ -1,3 +1,3 @@
 export default function Queue() {
-    return <main className="flex min-h-screen flex-col items-center p-12">Queue</main>;
+    return <main className="flex flex-col items-center my-16">Queue</main>;
 }

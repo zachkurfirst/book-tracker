@@ -3,14 +3,15 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="mt-auto flex flex-col gap-4 sm:gap-0 sm:flex-row w-full items-center sm:justify-between text-center lg:w-full lg:max-w-5xl text-slate-700 dark:text-slate-300 border-t pt-12">
+    <footer className="mt-auto flex w-full max-w-4xl flex-col items-center gap-4 border-t border-slate-200 pt-12 text-center text-slate-700 sm:flex-row sm:justify-between sm:gap-0 dark:border-slate-700 dark:text-slate-300">
       <small>
         &copy; 2024. All rights reserved. Coded by{" "}
         <a
           className="font-bold"
           href="https://zachkurfirst.com/"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+        >
           Zach Kurfirst
         </a>
       </small>
