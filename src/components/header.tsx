@@ -1,6 +1,10 @@
 // HEADER COMPONENT
-import Image from "next/image";
+
+// Client component
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -9,6 +13,9 @@ const navItems = [
 ];
 
 export default function Header() {
+  // hook for navigation active states
+  const pathname = usePathname();
+  console.log(pathname);
   return (
     <header className="fixed left-0 top-0 z-10 flex w-full max-w-4xl items-center justify-between border-slate-300 bg-slate-300/30 px-8 py-6 backdrop-blur-3xl md:static md:border-b md:bg-inherit md:pb-8 md:pt-0 dark:border-slate-800 dark:bg-slate-800/30 dark:from-inherit dark:md:bg-inherit">
       <Link href="/">
@@ -16,24 +23,22 @@ export default function Header() {
       </Link>
       <nav>
         <ul className="flex justify-end gap-4 text-sm md:text-base">
-          {navItems.map((item) => (
-            <li key={item.name} className="font-medium">
+          {navItems.map((link) => (
+            <li key={link.name} className="font-medium">
               {/* Use 'Link' in next.js for client-side routing */}
               <Link
-                className="text-slate-600 dark:text-slate-200"
-                href={item.href}
+                className={`${pathname === link.href ? "text-slate-950 underline underline-offset-8 dark:text-slate-50" : "text-slate-500 dark:text-slate-200"}`}
+                href={link.href}
               >
-                {item.name}
+                {link.name}
               </Link>
             </li>
           ))}
         </ul>
       </nav>
-      <nav>
-        <ul className="text-sm font-medium md:text-base">
-          <li>Log In</li>
-        </ul>
-      </nav>
+      <button className="rounded-md bg-slate-700 px-4 py-2 text-sm font-medium text-slate-100 md:px-6 md:text-base dark:bg-slate-400">
+        Log In
+      </button>
     </header>
   );
 }

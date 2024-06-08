@@ -24,6 +24,7 @@ export default function Footer() {
             width={90}
             height={18.5}
             priority
+            title="Next.js Logo"
           />
         </a>
       </div>

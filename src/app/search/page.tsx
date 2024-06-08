@@ -1,8 +1,8 @@
-// LIBRARY: /library
-export default function Library() {
+// SEARCH: /search
+export default function Search() {
   return (
     <main className="my-16 max-w-prose">
-      <h1 className="mb-4 text-3xl font-bold md:text-5xl">Library</h1>
+      <h1 className="mb-4 text-3xl font-bold md:text-5xl">Search</h1>
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem
         repudiandae eligendi et excepturi laudantium in. Placeat similique autem
