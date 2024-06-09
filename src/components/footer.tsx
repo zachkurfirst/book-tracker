@@ -22,7 +22,7 @@ export default function Footer() {
             src="/next.svg"
             alt="Next.js Logo"
             width={90}
-            height={18.5}
+            height={18}
             priority
             title="Next.js Logo"
           />

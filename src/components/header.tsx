@@ -17,7 +17,7 @@ export default function Header() {
   const pathname = usePathname();
   console.log(pathname);
   return (
-    <header className="max-w-8xl sticky left-0 top-0 z-10 mx-auto flex w-full items-center justify-around border-b border-slate-300 bg-slate-300/60 p-8 backdrop-blur-3xl md:bg-inherit dark:border-slate-800 dark:bg-slate-800/30 dark:from-inherit dark:md:bg-inherit">
+    <header className="max-w-8xl sticky left-0 top-0 z-10 mx-auto flex w-full items-center justify-around border-b border-slate-300 bg-slate-300 bg-opacity-80 p-8 backdrop-blur-3xl sm:bg-opacity-30 md:bg-inherit dark:border-slate-800 dark:bg-slate-800 dark:from-inherit dark:md:bg-inherit">
       <Link href="/">
         <span className="p-4 text-2xl md:text-4xl">📚</span>
       </Link>

@@ -1,5 +1,9 @@
 // SEARCH: /search
+const API_KEY = process.env.API_KEY
+
 export default function Search() {
+  console.log(API_KEY)
+  // const response = await fetch()
   return (
     <main className="mx-8 my-16 max-w-md md:max-w-prose">
       <h1 className="mb-4 text-3xl font-bold md:text-5xl">Search</h1>
