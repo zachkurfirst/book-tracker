@@ -4,6 +4,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowRightIcon } from "@heroicons/react/20/solid";
+import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 
 export default function SearchBar() {
   const [query, setQuery] = useState("");
@@ -27,13 +29,13 @@ export default function SearchBar() {
   return (
     <div className="flex flex-col">
       <form
-        className="max-w-8xl flex justify-between gap-4"
+        className="max-w-8xl flex justify-between gap-2"
         onSubmit={handleSubmit}
       >
         <input
           className="w-full flex-1 rounded-md border border-slate-300 bg-slate-100 p-2 outline-none dark:border-slate-700 dark:bg-slate-800"
           type="text"
-          placeholder="Search a book or author..."
+          placeholder="Search for a book or author..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
@@ -62,7 +64,12 @@ export default function SearchBar() {
                   {book.volumeInfo.authors &&
                     book.volumeInfo.authors.join(", ")}
                 </p>
-                <Link href={`/book/${book.id}`} className="rounded-md bg-slate-700 px-4 py-2 text-sm font-medium text-slate-100 transition-all hover:bg-green-700 w-fit">More</Link>
+                <Link
+                  href={`/book/${book.id}`}
+                  className="flex w-min justify-between gap-2 rounded-md bg-slate-700 px-4 py-2 text-sm font-medium text-slate-100 transition-all hover:bg-green-700"
+                >
+                  More <ArrowRightIcon className="w-4" />
+                </Link>
               </div>
             </div>
           ))}
