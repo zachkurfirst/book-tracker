@@ -15,7 +15,7 @@ const navItems = [
 export default function Header() {
   // hook for navigation active states
   const pathname = usePathname();
-  console.log(pathname);
+  console.log(`pathname: ${pathname}`);
   return (
     <header className="max-w-8xl sticky left-0 top-0 z-10 mx-auto flex w-full items-center justify-around border-b border-slate-300 bg-slate-300 bg-opacity-80 p-8 backdrop-blur-3xl sm:bg-opacity-30 md:bg-inherit dark:border-slate-800 dark:bg-slate-800 dark:from-inherit dark:md:bg-inherit">
       <Link href="/">

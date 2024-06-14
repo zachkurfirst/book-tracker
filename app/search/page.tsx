@@ -1,21 +1,6 @@
 // Search page: /search
-const API_KEY = process.env.API_KEY;
+"use client";
 import SearchBar from "../components/SearchBar";
-
-// const fetchData = async (e) => {
-//   e.preventDefault();
-//   console.log(API_KEY);
-//   console.log(`fetching data with query: ${search}`);
-//   const res = await fetch(
-//     `https://www.googleapis.com/books/v1/volumes?q=${search}&maxResults=2&key=${API_KEY}`,
-//   );
-//   const data = await res.json();
-//   if (!res.ok) {
-//     throw new Error(data.message || "Something went wrong");
-//   }
-//   console.log(data);
-//   return data;
-// };
 
 export default function Search() {
   return (
