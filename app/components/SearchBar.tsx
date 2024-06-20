@@ -9,10 +9,22 @@ import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 
 export default function SearchBar() {
   const [query, setQuery] = useState("");
-  const [results, setResults] = useState([]);
+
+  type Book = {
+    id: string;
+    volumeInfo: {
+      imageLinks: {
+        thumbnail: string;
+      };
+      title: string;
+      authors: string[];
+    };
+  };
+
+  const [results, setResults] = useState<Book[]>([]);
 
   // runs when user submits search query
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     // pass search query to the backend
     const res = await fetch(`/api/search?q=${query}`);
@@ -50,13 +62,14 @@ export default function SearchBar() {
       <div className="">
         {results &&
           results.map((book) => (
-            <div key={book.id} className="my-8 flex gap-4">
+            <div key={book.id} className="relative my-8 flex gap-4">
               <Image
                 src={book.volumeInfo.imageLinks.thumbnail}
                 alt={book.volumeInfo.title}
                 width={100}
                 height={150}
-                title={book.volumeInfo.title}
+                className="h-auto w-24"
+                title={`Cover of ${book.volumeInfo.title}`}
               />
               <div className="flex flex-col justify-center gap-2">
                 <h3 className="text-xl font-bold">{book.volumeInfo.title}</h3>
