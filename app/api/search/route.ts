@@ -4,7 +4,7 @@ const API_KEY = process.env.API_KEY;
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
-  console.log(request.nextUrl)
+  // console.log(request.nextUrl)
   const query = searchParams.get("q");
   const res = await fetch(
     `https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=10&key=${API_KEY}`,

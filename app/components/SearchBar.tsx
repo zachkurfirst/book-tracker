@@ -32,8 +32,8 @@ export default function SearchBar() {
       throw new Error("Failed to fetch search results");
     }
     const data = await res.json();
-    console.log("data:", data);
-    console.log("data.items:", data.items);
+    // console.log("data:", data);
+    // console.log("data.items:", data.items);
     setResults(data.items);
   };
 
