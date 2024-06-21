@@ -1,4 +1,8 @@
 //! NO LONGER USING
+// below placeholder to satisfy TS and avoid build errors
+const emptyPlaceholder = {};
+export default emptyPlaceholder;
+
 // BACKEND SERVER -> route handler
 // import { NextResponse } from "next/server";
 // const API_KEY = process.env.API_KEY;
