@@ -27,6 +27,6 @@
     "**/*.tsx",
     "app/**/*.tsx",
     ".next/types/**/*.ts"
-  ],
+, "app/api/book/[id]/route.ts.inactive"  ],
   "exclude": ["node_modules"]
 }
