@@ -7,8 +7,6 @@ export async function GET(
   { params }: { params: { id: string } },
 ) {
   const id = params.id;
-  console.log(id);
-  //   console.log(request.nextUrl)
   const res = await fetch(
     `https://www.googleapis.com/books/v1/volumes/${id}?key=${API_KEY}`,
   );
@@ -16,6 +14,5 @@ export async function GET(
     throw new Error("Failed to fetch results");
   }
   const data = await res.json();
-  // console.log(data);
   return NextResponse.json(data);
 }
