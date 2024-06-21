@@ -60,9 +60,9 @@ export default function SearchBar() {
         </button>
       </form>
       <div className="">
-        {results &&
+        {results ? (
           results.map((book) => (
-            <div key={book.id} className="relative my-8 flex gap-4">
+            <div key={book.id} className="my-8 flex gap-4">
               <Image
                 src={book.volumeInfo.imageLinks.thumbnail}
                 alt={book.volumeInfo.title}
@@ -85,7 +85,12 @@ export default function SearchBar() {
                 </Link>
               </div>
             </div>
-          ))}
+          ))
+        ) : (
+          <p className="my-4 text-red-500">
+            No results found! Please try again.
+          </p>
+        )}
       </div>
     </div>
   );
