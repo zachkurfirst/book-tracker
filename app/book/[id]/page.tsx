@@ -1,4 +1,5 @@
 // Book detail page: /book/[id] -> direct server-side fetch
+// import { removeHtmlTags } from "@/utils/sanitizeHtml";
 const API_KEY = process.env.API_KEY;
 
 export default async function BookDetail({
@@ -16,10 +17,14 @@ export default async function BookDetail({
   const book = await res.json();
   return (
     <main className="mx-8 my-16 max-w-md md:max-w-prose">
-      <h1 className="mb-4 text-3xl font-bold md:text-5xl">
+      <h1 className="mb-2 text-3xl font-bold md:text-5xl">
         {book.volumeInfo.title}
       </h1>
-      <p className="mb-4">{book.volumeInfo.description}</p>
+      <h2 className="text-slate-600 text-xl font-medium mb-6">{book.volumeInfo.authors && book.volumeInfo.authors.join(", ")}</h2>
+      <div
+        className="mb-4"
+        dangerouslySetInnerHTML={{ __html: book.volumeInfo.description }}
+      />
     </main>
   );
 }
