@@ -1,11 +1,10 @@
-// BACKEND SERVER
-import { NextResponse } from "next/server";
+// BACKEND SERVER -> route handler
+import { NextRequest, NextResponse } from "next/server";
 const API_KEY = process.env.API_KEY;
 
-export async function GET(request: Request) {
-  const { searchParams } = new URL(request.url);
-  console.log(request.url)
-  console.log(request)
+export async function GET(request: NextRequest) {
+  const searchParams = request.nextUrl.searchParams;
+  console.log(request.nextUrl)
   const query = searchParams.get("q");
   const res = await fetch(
     `https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=10&key=${API_KEY}`,
