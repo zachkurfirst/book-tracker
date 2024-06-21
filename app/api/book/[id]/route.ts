@@ -1,3 +1,4 @@
+//! NO LONGER USING
 // BACKEND SERVER -> route handler
 import { NextResponse } from "next/server";
 const API_KEY = process.env.API_KEY;
