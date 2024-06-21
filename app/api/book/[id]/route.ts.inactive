@@ -1,4 +1,7 @@
 //! NO LONGER USING
+export default () => {
+  throw new Error("This route is currently inactive.");
+};
 // BACKEND SERVER -> route handler
 // import { NextResponse } from "next/server";
 // const API_KEY = process.env.API_KEY;
